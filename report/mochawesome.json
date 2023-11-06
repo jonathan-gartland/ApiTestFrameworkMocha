@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T18:50:13.403Z",
-    "end": "2023-11-06T18:50:15.214Z",
-    "duration": 1811,
+    "start": "2023-11-06T18:55:22.431Z",
+    "end": "2023-11-06T18:55:23.918Z",
+    "duration": 1487,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "98c4ca8a-4ab7-498e-97a8-ba7d44e50729",
+      "uuid": "b641cbfd-4bda-4e11-9609-4fd1ccfd7a99",
       "title": "",
       "fullFile": "/Users/jgartland/Projects/node-20/mocha-sandbox/ApiTestFramework/src/test/users.spec.ts",
       "file": "/src/test/users.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "417357b4-31b0-479a-8326-17c56c03404a",
+          "uuid": "8d2778f4-b347-4c59-8058-629e959670a2",
           "title": "Test ReqRes APIs",
           "fullFile": "/Users/jgartland/Projects/node-20/mocha-sandbox/ApiTestFramework/src/test/users.spec.ts",
           "file": "/src/test/users.spec.ts",
@@ -38,7 +38,7 @@
               "title": "should validate create user admin",
               "fullTitle": "Test ReqRes APIs should validate create user admin",
               "timedOut": false,
-              "duration": 754,
+              "duration": 447,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        (0, schemavalidator_1.checkResponseSchema)(response, userchema_json_1.default);\n                        responseBody = response.body;\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).not.empty;\n                        (0, chai_1.expect)(createdAt).not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
               "err": {},
-              "uuid": "af343b16-8b20-412b-b077-51d5ed691391",
-              "parentUUID": "417357b4-31b0-479a-8326-17c56c03404a",
+              "uuid": "119b138e-c4b9-4e17-9eac-4680508ee83d",
+              "parentUUID": "8d2778f4-b347-4c59-8058-629e959670a2",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "should validate create user Sexton",
               "fullTitle": "Test ReqRes APIs should validate create user Sexton",
               "timedOut": false,
-              "duration": 581,
+              "duration": 538,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        (0, schemavalidator_1.checkResponseSchema)(response, userchema_json_1.default);\n                        responseBody = response.body;\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).not.empty;\n                        (0, chai_1.expect)(createdAt).not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
               "err": {},
-              "uuid": "9dcbe7b8-aaf8-4b14-822b-6dc43c409d89",
-              "parentUUID": "417357b4-31b0-479a-8326-17c56c03404a",
+              "uuid": "5db58c1a-793f-4cbc-9c87-218e772d53db",
+              "parentUUID": "8d2778f4-b347-4c59-8058-629e959670a2",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "should validate create user Farrell",
               "fullTitle": "Test ReqRes APIs should validate create user Farrell",
               "timedOut": false,
-              "duration": 467,
+              "duration": 497,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        (0, schemavalidator_1.checkResponseSchema)(response, userchema_json_1.default);\n                        responseBody = response.body;\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).not.empty;\n                        (0, chai_1.expect)(createdAt).not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
               "err": {},
-              "uuid": "b86c3552-07da-4ccb-8225-64295ed51880",
-              "parentUUID": "417357b4-31b0-479a-8326-17c56c03404a",
+              "uuid": "b5dd082a-b0c9-4ccb-875c-61d4afb7e53b",
+              "parentUUID": "8d2778f4-b347-4c59-8058-629e959670a2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "af343b16-8b20-412b-b077-51d5ed691391",
-            "9dcbe7b8-aaf8-4b14-822b-6dc43c409d89",
-            "b86c3552-07da-4ccb-8225-64295ed51880"
+            "119b138e-c4b9-4e17-9eac-4680508ee83d",
+            "5db58c1a-793f-4cbc-9c87-218e772d53db",
+            "b5dd082a-b0c9-4ccb-875c-61d4afb7e53b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1802,
+          "duration": 1482,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
