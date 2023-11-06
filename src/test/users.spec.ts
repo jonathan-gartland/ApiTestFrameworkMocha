@@ -1,32 +1,38 @@
-import { expect, use } from 'chai';
-import { performance } from 'perf_hooks';
-import { postCall } from '@Helper/apicall';
-import { logResponseToReport } from '@Helper/logger';
+import { httpPostCall } from '@Helper/apicall';
+import { performanceTime } from '@Helper/utils';
 import users from "@Resources/testdata.json";
-// import Userschema from '@Resources/userschema.json';
 import userschema from "@Schema/user.json"
 import { endpoint } from '@Services/endpoints';
+import { RESPONSE } from '@Static/Constants';
 import { UserPayloadType, UserResponseType } from '@Types/user';
-use(require('chai-json-schema'));
+import ResponseAssert from "@Validation/ResponseAssert";
+import { expect } from 'chai';
+
 describe('Test ReqRes APIs', () => {
   // placeholder
   users.forEach((user: UserPayloadType) => {
     it(`should validate create user ${user.name}`, async function () {
-      const startTime = performance.now();
-      const response = await postCall(endpoint.user, user);
+      const startTime = performanceTime()
+      const response = await httpPostCall({
+        service: endpoint.user,
+        payload: user,
+        context: this
+      });
+
       expect(performance.now() - startTime).to.be.lessThan(2000);
       expect(response.statusCode).to.equal(201);
       expect(response.type).to.equal("application/json");
+      const { name, job, id, createdAt }: UserResponseType = response.body;
 
-      logResponseToReport(this, response);
-      const responseBody: UserResponseType = response.body;
-      expect(responseBody).to.be.jsonSchema(userschema)
-
-      const { name, job, id, createdAt } = responseBody;
-      expect(name).equal(user.name);
-      expect(job).equal(user.job);
-      expect(id).is.not.empty;
-      expect(createdAt).is.not.empty;
+      new ResponseAssert(response)
+        .timeIsLessThan(startTime, RESPONSE.TIME)
+        .statusCodeIs(RESPONSE.CODE)
+        .typeIs(RESPONSE.TYPE)
+        .schemaIs(userschema)
+        .toEqual(name, user.name)
+        .toEqual(job, user.job)
+        .isNotEmpty(id)
+        .isNotEmpty(createdAt);
     })
   });
 })
