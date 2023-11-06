@@ -44,6 +44,11 @@ jobs:
 
     - name: Upload report artifact
       uses: actions/upload-artifact@v2
+#      with:
+#        name: MochawesomeReport
+#        path: /report
+    - name: Deploy report to GitHub Page
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: MochawesomeReport
-        path: /report
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./report
