@@ -1,17 +1,23 @@
 import { expect } from 'chai';
-import { createUserPayload } from 'src/resources/payload';
-import userdata from "src/resources/testdata.json"
-import supertest from 'supertest';
+import { request } from 'src/config/supertest';
+import { performance } from 'perf_hooks';
+import users from "src/resources/testdata.json";
+import Userschema from "src/resources/userchema.json"
+import { validate } from 'jsonschema';
 
-const request = supertest("https://reqres.in/api/");
-
+import { UserPayloadType, UserResponseType } from 'src/types/user';
 describe('Test ReqRes APIs', () => {
 
-  userdata.forEach((user: {name: string, job: string}) => {
-    it(`Should validate create user ${user.name}`, async () => {
+  users.forEach((user: UserPayloadType) => {
+    it(`should validate create user ${user.name}`, async () => {
+      const startTime = performance.now();
       const response = await request.post('users').send(user);
+      expect(performance.now() - startTime).to.be.lessThan(2000);
       expect(response.statusCode).to.equal(201);
-      console.log(JSON.stringify(response.body));
-    });
+      expect(response.type).to.equal("application/json");
+      const responseBody: UserResponseType = response.body
+      expect(validate(responseBody, Userschema).valid).to.be.true;
+      expect(validate(responseBody, Userschema).errors.length).to.equal(0);
+    })
   });
 })
