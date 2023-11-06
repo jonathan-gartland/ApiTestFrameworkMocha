@@ -1,12 +1,11 @@
 import { expect } from 'chai';
-import { postCall } from 'src/helper/apicall';
 import { performance } from 'perf_hooks';
-import users from "src/resources/testdata.json";
-import Userschema from "src/resources/userchema.json"
-import { checkResponseSchema } from 'src/helper/schemavalidator';
-import { endpoint } from 'src/services/endpoints';
-
-import { UserPayloadType, UserResponseType } from 'src/types/user';
+import { postCall } from '@Helper/apicall';
+import { checkResponseSchema } from '@Helper/schemavalidator';
+import users from "@Resources/testdata.json";
+import Userschema from '@Resources/userschema.json';
+import { endpoint } from '@Services/endpoints';
+import { UserPayloadType, UserResponseType } from '@Types/user';
 describe('Test ReqRes APIs', () => {
   // placeholder
   users.forEach((user: UserPayloadType) => {
