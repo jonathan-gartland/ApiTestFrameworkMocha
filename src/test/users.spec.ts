@@ -1,7 +1,7 @@
 import { expect, use } from 'chai';
 import { performance } from 'perf_hooks';
 import { postCall } from '@Helper/apicall';
-import { checkResponseSchema } from '@Helper/schemavalidator';
+import { logResponseToReport } from '@Helper/logger';
 import users from "@Resources/testdata.json";
 // import Userschema from '@Resources/userschema.json';
 import userschema from "@Schema/user.json"
@@ -11,13 +11,14 @@ use(require('chai-json-schema'));
 describe('Test ReqRes APIs', () => {
   // placeholder
   users.forEach((user: UserPayloadType) => {
-    it(`should validate create user ${user.name}`, async () => {
+    it(`should validate create user ${user.name}`, async function () {
       const startTime = performance.now();
       const response = await postCall(endpoint.user, user);
       expect(performance.now() - startTime).to.be.lessThan(2000);
       expect(response.statusCode).to.equal(201);
       expect(response.type).to.equal("application/json");
 
+      logResponseToReport(this, response);
       const responseBody: UserResponseType = response.body;
       expect(responseBody).to.be.jsonSchema(userschema)
 

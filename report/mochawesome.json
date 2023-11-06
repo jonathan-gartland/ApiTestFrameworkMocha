@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-06T19:53:52.309Z",
-    "end": "2023-11-06T19:53:53.742Z",
-    "duration": 1433,
+    "start": "2023-11-06T20:49:32.225Z",
+    "end": "2023-11-06T20:49:33.528Z",
+    "duration": 1303,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c6db4abf-6216-4c17-9059-a5554f8f32e9",
+      "uuid": "a7689aeb-12c6-402a-bc83-84098322e5de",
       "title": "",
       "fullFile": "/Users/jgartland/Projects/node-20/mocha-sandbox/ApiTestFramework/src/test/users.spec.ts",
       "file": "/src/test/users.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "74fbe44c-9fb7-47c5-9150-a277532c79ee",
+          "uuid": "f3821c67-0e6c-44d1-bae4-19b13ad86a53",
           "title": "Test ReqRes APIs",
           "fullFile": "/Users/jgartland/Projects/node-20/mocha-sandbox/ApiTestFramework/src/test/users.spec.ts",
           "file": "/src/test/users.spec.ts",
@@ -38,17 +38,17 @@
               "title": "should validate create user admin",
               "fullTitle": "Test ReqRes APIs should validate create user admin",
               "timedOut": false,
-              "duration": 675,
+              "duration": 430,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
-              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        responseBody = response.body;\n                        (0, chai_1.expect)(responseBody).to.be.jsonSchema(user_json_1.default);\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).is.not.empty;\n                        (0, chai_1.expect)(createdAt).is.not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "context": "\"Response: {\\n    \\\"name\\\": \\\"admin\\\",\\n    \\\"job\\\": \\\"admin\\\",\\n    \\\"id\\\": \\\"178\\\",\\n    \\\"createdAt\\\": \\\"2023-11-06T17:49:39.048Z\\\"\\n}\"",
+              "code": "",
               "err": {},
-              "uuid": "7c405a34-83d1-45d2-8216-3266c75d3a39",
-              "parentUUID": "74fbe44c-9fb7-47c5-9150-a277532c79ee",
+              "uuid": "eba7af33-9930-4ec0-b0ce-d20d93cdf16c",
+              "parentUUID": "f3821c67-0e6c-44d1-bae4-19b13ad86a53",
               "isHook": false,
               "skipped": false
             },
@@ -56,17 +56,17 @@
               "title": "should validate create user Sexton",
               "fullTitle": "Test ReqRes APIs should validate create user Sexton",
               "timedOut": false,
-              "duration": 388,
+              "duration": 376,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
-              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        responseBody = response.body;\n                        (0, chai_1.expect)(responseBody).to.be.jsonSchema(user_json_1.default);\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).is.not.empty;\n                        (0, chai_1.expect)(createdAt).is.not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "context": "\"Response: {\\n    \\\"name\\\": \\\"Sexton\\\",\\n    \\\"job\\\": \\\"player\\\",\\n    \\\"id\\\": \\\"362\\\",\\n    \\\"createdAt\\\": \\\"2023-11-06T17:49:39.447Z\\\"\\n}\"",
+              "code": "",
               "err": {},
-              "uuid": "51d7335e-800f-4764-86b7-99949afd1ccf",
-              "parentUUID": "74fbe44c-9fb7-47c5-9150-a277532c79ee",
+              "uuid": "f4809480-2c46-475f-a176-e1591483fcf4",
+              "parentUUID": "f3821c67-0e6c-44d1-bae4-19b13ad86a53",
               "isHook": false,
               "skipped": false
             },
@@ -74,31 +74,31 @@
               "title": "should validate create user Farrell",
               "fullTitle": "Test ReqRes APIs should validate create user Farrell",
               "timedOut": false,
-              "duration": 364,
+              "duration": 491,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
-              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var startTime, response, responseBody, name, job, id, createdAt;\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0:\n                        startTime = perf_hooks_1.performance.now();\n                        return [4 /*yield*/, (0, apicall_1.postCall)(endpoints_1.endpoint.user, user)];\n                    case 1:\n                        response = _a.sent();\n                        (0, chai_1.expect)(perf_hooks_1.performance.now() - startTime).to.be.lessThan(2000);\n                        (0, chai_1.expect)(response.statusCode).to.equal(201);\n                        (0, chai_1.expect)(response.type).to.equal(\"application/json\");\n                        responseBody = response.body;\n                        (0, chai_1.expect)(responseBody).to.be.jsonSchema(user_json_1.default);\n                        name = responseBody.name, job = responseBody.job, id = responseBody.id, createdAt = responseBody.createdAt;\n                        (0, chai_1.expect)(name).equal(user.name);\n                        (0, chai_1.expect)(job).equal(user.job);\n                        (0, chai_1.expect)(id).is.not.empty;\n                        (0, chai_1.expect)(createdAt).is.not.empty;\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "context": "\"Response: {\\n    \\\"name\\\": \\\"Farrell\\\",\\n    \\\"job\\\": \\\"manager\\\",\\n    \\\"id\\\": \\\"129\\\",\\n    \\\"createdAt\\\": \\\"2023-11-06T17:49:39.800Z\\\"\\n}\"",
+              "code": "",
               "err": {},
-              "uuid": "266c81bf-234a-4f04-af1a-735254f2ef75",
-              "parentUUID": "74fbe44c-9fb7-47c5-9150-a277532c79ee",
+              "uuid": "ebd0af87-bc24-415f-bcb4-2cf2bee05e13",
+              "parentUUID": "f3821c67-0e6c-44d1-bae4-19b13ad86a53",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7c405a34-83d1-45d2-8216-3266c75d3a39",
-            "51d7335e-800f-4764-86b7-99949afd1ccf",
-            "266c81bf-234a-4f04-af1a-735254f2ef75"
+            "eba7af33-9930-4ec0-b0ce-d20d93cdf16c",
+            "f4809480-2c46-475f-a176-e1591483fcf4",
+            "ebd0af87-bc24-415f-bcb4-2cf2bee05e13"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1427,
+          "duration": 1297,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
@@ -126,13 +126,15 @@
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
-        "code": true
+        "code": false
       },
       "version": "7.1.3"
     },
     "marge": {
       "options": {
-        "reportDir": "report"
+        "o": "report",
+        "charts": "true",
+        "code": "false"
       },
       "version": "6.2.0"
     }
