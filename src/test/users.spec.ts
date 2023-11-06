@@ -3,7 +3,7 @@ import { performanceTime } from '@Helper/utils';
 import users from "@Resources/testdata.json";
 import userschema from "@Schema/user.json"
 import { endpoint } from '@Services/endpoints';
-import { RESPONSE } from '@Static/Constants';
+import { RESPONSE } from '@Static/constants';
 import { UserPayloadType, UserResponseType } from '@Types/user';
 import ResponseAssert from "@Validation/ResponseAssert";
 import { expect } from 'chai';
