@@ -3,12 +3,12 @@ import { postCall } from 'src/helper/apicall';
 import { performance } from 'perf_hooks';
 import users from "src/resources/testdata.json";
 import Userschema from "src/resources/userchema.json"
-import { validate } from 'jsonschema';
+import { checkResponseSchema } from 'src/helper/schemavalidator';
 import { endpoint } from 'src/services/endpoints';
 
 import { UserPayloadType, UserResponseType } from 'src/types/user';
 describe('Test ReqRes APIs', () => {
-
+  // placeholder
   users.forEach((user: UserPayloadType) => {
     it(`should validate create user ${user.name}`, async () => {
       const startTime = performance.now();
@@ -16,10 +16,10 @@ describe('Test ReqRes APIs', () => {
       expect(performance.now() - startTime).to.be.lessThan(2000);
       expect(response.statusCode).to.equal(201);
       expect(response.type).to.equal("application/json");
-      const responseBody: UserResponseType = response.body
-      expect(validate(responseBody, Userschema).valid).to.be.true;
-      expect(validate(responseBody, Userschema).errors.length).to.equal(0);
 
+      checkResponseSchema(response, Userschema);
+
+      const responseBody: UserResponseType = response.body;
       const { name, job, id, createdAt } = responseBody;
       expect(name).equal(user.name);
       expect(job).equal(user.job);
