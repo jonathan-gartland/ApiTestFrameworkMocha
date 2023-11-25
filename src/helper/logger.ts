@@ -9,6 +9,6 @@ export const logResponseToReport = (
   context: Mocha.Context | undefined,
   response: supertest.Response
 ): void => {
-  // @ts-expect-error
+  // @ts-expect-error  explain why here
   addContext(context, formatResponse(response));
 };

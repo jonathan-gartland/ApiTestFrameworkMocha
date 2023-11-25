@@ -12,7 +12,7 @@ describe('Test ReqRes APIs', () => {
   // placeholder
   users.forEach((user: UserPayloadType) => {
     it(`should validate create user ${user.name}`, async function () {
-      // @ts-expect-error
+      // @ts-expect-error  explain why here
       const startTime = performanceTime();
       const response = await httpPostCall({
         service: endpoint.user,

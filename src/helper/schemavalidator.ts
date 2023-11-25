@@ -1,4 +1,4 @@
-// @ts-expect-error
+// @ts-expect-error explain why here
 import { validate } from 'jsonschema';
 import { type Response } from 'supertest';
 
