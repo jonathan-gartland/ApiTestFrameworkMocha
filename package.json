@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
+    "lint": "eslint --ext .js,.ts",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "test": "mocha --timeout 5000 --reporter mochawesome --reporter-options o=report  --reporter-options charts=true  --reporter-options code=false -r tsconfig-paths/register -r ts-node/register src/test/*.ts"
   },

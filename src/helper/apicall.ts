@@ -1,7 +1,7 @@
-import { request } from "@Config/supertest";
-import { logResponseToReport } from "@Helper/logger";
-import { type GetApiType, type PostApiType } from "@Types/http";
-import { type Response } from "supertest";
+import { request } from '@Config/supertest';
+import { logResponseToReport } from '@Helper/logger';
+import { type GetApiType, type PostApiType } from '@Types/http';
+import { type Response } from 'supertest';
 
 const setObjectOrEmptyIfUndefined: any = (data?: object) => data ?? {};
 

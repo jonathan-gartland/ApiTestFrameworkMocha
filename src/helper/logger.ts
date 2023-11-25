@@ -1,5 +1,5 @@
-import addContext from "mochawesome/addContext";
-import type supertest from "supertest";
+import addContext from 'mochawesome/addContext';
+import type supertest from 'supertest';
 
 const formatResponse = (response: supertest.Response): string => {
   return `Response: ${JSON.stringify(response.body, null, 4)}`;

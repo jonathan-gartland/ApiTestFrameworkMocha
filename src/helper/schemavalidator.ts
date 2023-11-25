@@ -1,6 +1,6 @@
 // @ts-expect-error
-import { validate } from "jsonschema";
-import { type Response } from "supertest";
+import { validate } from 'jsonschema';
+import { type Response } from 'supertest';
 
 /**
  * Custom implementation of json schema validation that return true or throw filtered meaningful error

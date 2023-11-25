@@ -1,4 +1,4 @@
-import { type endpoint } from "@Services/endpoints";
+import { type endpoint } from '@Services/endpoints';
 
 export interface ApiOptions {
   service: endpoint;

@@ -1,8 +1,8 @@
-import { performanceTime } from "@Helper/utils";
-import { expect, use } from "chai";
-import { type Response } from "supertest";
+import { performanceTime } from '@Helper/utils';
+import { expect, use } from 'chai';
+import { type Response } from 'supertest';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-use(require("chai-json-schema"));
+use(require('chai-json-schema'));
 
 export default class ResponseAssert {
   constructor(private readonly response: Response) {

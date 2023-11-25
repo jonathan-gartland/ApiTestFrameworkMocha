@@ -14,10 +14,5 @@
       "type": "string"
     }
   },
-  "required": [
-    "name",
-    "job",
-    "id",
-    "createdAt"
-  ]
+  "required": ["name", "job", "id", "createdAt"]
 }

@@ -6,30 +6,14 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": false,
     "paths": {
-      "@Config/*": [
-        "./src/config/*"
-      ],
-      "@Resources/*": [
-        "./src/resources/*"
-      ],
-      "@Helper/*": [
-        "./src/helper/*"
-      ],
-      "@Services/*": [
-        "./src/services/*"
-      ],
-      "@Types/*": [
-        "./src/types/*"
-      ],
-      "@Schema/*": [
-        "./src/schema/*"
-      ],
-      "@Validation/*": [
-        "./src/validations/*"
-      ],
-      "@Static/*": [
-        "./src/static/*"
-      ]
+      "@Config/*": ["./src/config/*"],
+      "@Resources/*": ["./src/resources/*"],
+      "@Helper/*": ["./src/helper/*"],
+      "@Services/*": ["./src/services/*"],
+      "@Types/*": ["./src/types/*"],
+      "@Schema/*": ["./src/schema/*"],
+      "@Validation/*": ["./src/validations/*"],
+      "@Static/*": ["./src/static/*"]
     }
   }
 }
