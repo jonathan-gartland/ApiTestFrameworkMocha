@@ -1,3 +1,3 @@
-import { performance } from 'perf_hooks';
+import { performance } from "perf_hooks";
 
-export const performanceTime = () => performance.now();
+export const performanceTime: object = () => performance.now();
