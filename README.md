@@ -43,5 +43,5 @@ For the work I used either of the following:
 
 
 ## Test Results:  
-![image]()  
-![image]()  
+![image](results.png)  
+![image](report.png)  

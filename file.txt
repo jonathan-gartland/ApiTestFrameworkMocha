@@ -1,0 +1,19 @@
+.
+├── Dockerfile
+├── README.md
+├── file.txt
+├── package-lock.json
+├── package.json
+├── src
+│   ├── config
+│   ├── helper
+│   ├── resources
+│   ├── schema
+│   ├── services
+│   ├── static
+│   ├── test
+│   ├── types
+│   └── validations
+└── tsconfig.json
+
+11 directories, 6 files
