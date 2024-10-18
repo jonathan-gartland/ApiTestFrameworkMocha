@@ -7,12 +7,21 @@
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "test": "mocha --timeout 5000 --reporter mochawesome --reporter-options o=report  --reporter-options charts=true  --reporter-options code=false -r tsconfig-paths/register -r ts-node/register src/test/*.ts"
+    "test": "mocha --timeout 5000 --reporter mochawesome --reporter-options o=report  --reporter-options charts=true  --reporter-options code=false -r tsconfig-paths/register -r ts-node/register src/test/*.ts",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --max-warnings 0 ."
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@faker-js/faker": "^8.2.0",
     "@types/chai": "^4.3.9",
     "@types/chai-json-schema": "^1.4.8",
