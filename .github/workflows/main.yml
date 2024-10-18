@@ -5,7 +5,7 @@ name: Run API tests and publish reports
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, development ]
 
 jobs:
   APIAutomationBuild:
