@@ -1,3 +1,7 @@
+[![API tests demo](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml)  
+
+---  
+  
 # Automation Framework for API Testing  
 A simple implementation of API tests using the following libraries:    
   
